@@ -1,8 +1,8 @@
 class CreateApartaments < ActiveRecord::Migration[6.1]
   def change
     create_table :apartaments do |t|
-      t.string :number
-      t.string :id_building
+      t.integer :number
+      t.references :building
 
       t.timestamps
     end
